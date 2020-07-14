@@ -2,8 +2,8 @@ ports:
   - port: 8080
     onOpen: open-preview
 tasks:
-  - init: yarn
+  - init: yarn install
     command: yarn start
 github:
   prebuilds:
-    pullRequestsFromForks: true
+    pullRequestsFromForks: false

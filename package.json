@@ -8,8 +8,11 @@
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.10.0",
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@storeon/router": "^1.2.0",
-    "antd": "^4.4.2",
+    "emotion-theming": "^10.0.27",
     "graphql-request": "^2.0.0",
     "ramda": "^0.27.0",
     "react": "^16.13.0",

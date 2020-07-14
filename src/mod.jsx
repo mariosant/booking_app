@@ -1,20 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Helmet } from 'react-helmet'
+import ThemeProvider from "@chakra-ui/core/dist/es/ThemeProvider";
+import CSSReset from "@chakra-ui/core/dist/es/CSSReset";
+
 import { StoreProvider } from './store.js'
 import App from './App.jsx'
 
-import 'antd/dist/antd.css'
-
 ReactDOM.render(
 	<React.StrictMode>
-		<>
+		<>  
 			<Helmet>
 				<title>Booking for classes</title>
 			</Helmet>
-			<StoreProvider>
-				<App />
-			</StoreProvider>
+            <ThemeProvider>
+                <StoreProvider>
+                    <>
+                        <CSSReset />
+                        <App />
+                    </>
+                </StoreProvider>
+            </ThemeProvider>
 		</>
 	</React.StrictMode>,
 	document.getElementById('root')

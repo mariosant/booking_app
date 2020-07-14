@@ -1,23 +1,13 @@
 import React from 'react'
+import { useStoreon } from "storeon/react";
+import UnauthenticatedPage from 'src/pages/unauthenticated/page.jsx'
+
+const NormalPage = () => 'It works'
 
 function App() {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<p>
-					Edit <code>src/App.jsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
-	)
+    const {user} = useStoreon('auth0')
+
+    return user ? <NormalPage /> : <UnauthenticatedPage />    
 }
 
 export default App
